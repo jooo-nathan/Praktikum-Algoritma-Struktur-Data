@@ -5,7 +5,7 @@ public class Mahasiswa16{
     static String nama, NIM, kelas;
     static double IPK;
 
-    void tampilkanInformasi() {
+    public static void tampilkanInformasi() {
         System.out.println("Nama : " + nama);
         System.out.println("NIM : " + NIM);
         System.out.println("IPK : " + IPK);
@@ -13,15 +13,20 @@ public class Mahasiswa16{
 
     }
 
-    void ubahKelas(String kelasBaru) {
+    public static void ubahKelas(String kelasBaru) {
         kelas = kelasBaru;
     }
 
-    void updateIPK(double IPKBaru) {
-        IPK = IPKBaru;
+    public static void updateIPK(double IPKBaru) {
+        if (IPK >= 0.00 && IPK <= 4.00) {
+            IPK = IPKBaru;
+        }
+        else {
+            System.out.println("IPK tidak valid. Harus antara 0.0 dan 4.0");
+        }
     }
 
-    String nilaiKinerja(double IPK) {
+    public static String nilaiKinerja(double IPK) {
         if (IPK >= 3.5) {
             return "Kinerja sangat baik";
         }
