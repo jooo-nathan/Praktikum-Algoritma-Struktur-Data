@@ -9,6 +9,21 @@ public class Mahasiswa16 {
 
     }
 
+    public Mahasiswa16(String nm, String NIM, double IPK, String kls) {
+        nama = nm;
+        this.NIM = NIM;
+        this.IPK = IPK;
+        kelas = kls;
+    }
+
+    public void tampilkanInformasi() {
+        System.out.println("Nama : " + nama);
+        System.out.println("NIM : " + NIM);
+        System.out.println("IPK : " + IPK);
+        System.out.println("Kelas : " + kelas);
+
+    }
+
     public void ubahKelas(String kelasBaru) {
         kelas = kelasBaru;
     }
