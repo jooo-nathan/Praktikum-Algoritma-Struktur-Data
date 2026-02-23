@@ -1,15 +1,15 @@
 package Jobsheet2.LatihanPraktikum2;
 
-public class Dosen16 {
+public class Dosen14 {
     String idDosen, namaDosen, bidangKeahlian;
     boolean statusAktif;
     int tahunBergabung;
 
-    Dosen16() {
+    Dosen14() {
 
     }
 
-    Dosen16(String namaDosen, String idDosen, String bidangKeahlian, boolean statusAktif, int tahunBergabung) {
+    Dosen14(String namaDosen, String idDosen, String bidangKeahlian, boolean statusAktif, int tahunBergabung) {
         this.namaDosen = namaDosen;
         this.idDosen = idDosen;
         this.bidangKeahlian = bidangKeahlian;

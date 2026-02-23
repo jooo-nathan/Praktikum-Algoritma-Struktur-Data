@@ -1,14 +1,14 @@
 package Jobsheet2.LatihanPraktikum1;
 
-public class MataKuliah {
+public class MataKuliah14 {
     String namaMK, kodeMK;
     int sks, jumlahJam;
 
-    MataKuliah() {
+    MataKuliah14() {
 
     }
 
-    MataKuliah(String namaMK, String kodeMK, int sks, int jumlahJam) {
+    MataKuliah14(String namaMK, String kodeMK, int sks, int jumlahJam) {
         this.namaMK = namaMK;
         this.kodeMK = kodeMK;
         this.sks = sks;

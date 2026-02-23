@@ -1,8 +1,8 @@
 package Jobsheet2;
 
-public class MahasiswaMain16 {
+public class MahasiswaMain14 {
     public static void main(String[] args) {
-        Mahasiswa16 mhs1 = new Mahasiswa16();
+        Mahasiswa14 mhs1 = new Mahasiswa14();
 
         mhs1.nama = "Muhammad Ali Farhan";
         mhs1.NIM = "2241720171";
@@ -14,11 +14,11 @@ public class MahasiswaMain16 {
         mhs1.updateIPK(3.60);
         mhs1.tampilkanInformasi();
 
-        Mahasiswa16 mhs2 = new Mahasiswa16("Annisa Nabila", "2141720160", 3.25, "TI 2L");
+        Mahasiswa14 mhs2 = new Mahasiswa14("Annisa Nabila", "2141720160", 3.25, "TI 2L");
         mhs2.updateIPK(3.30);
         mhs2.tampilkanInformasi();
 
-        Mahasiswa16 mhsJonathan = new Mahasiswa16("Jonathan Abdiel Haryono", "254107020036", 3.50, "TI 1G");
+        Mahasiswa14 mhsJonathan = new Mahasiswa14("Jonathan Abdiel Haryono", "254107020036", 3.50, "TI 1G");
         mhsJonathan.tampilkanInformasi();
     }
 }

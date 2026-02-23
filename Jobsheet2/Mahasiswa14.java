@@ -1,15 +1,15 @@
 package Jobsheet2;
 
-public class Mahasiswa16 {
+public class Mahasiswa14 {
 
     String nama, NIM, kelas;
     double IPK;
 
-    public Mahasiswa16() {
+    public Mahasiswa14() {
 
     }
 
-    public Mahasiswa16(String nm, String NIM, double IPK, String kls) {
+    public Mahasiswa14(String nm, String NIM, double IPK, String kls) {
         nama = nm;
         this.NIM = NIM;
         this.IPK = IPK;
