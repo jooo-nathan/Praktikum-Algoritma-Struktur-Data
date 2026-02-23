@@ -1,7 +1,7 @@
 package Jobsheet1;
 import java.util.Scanner;
 
-public class Pemilihan16 {
+public class Pemilihan14 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

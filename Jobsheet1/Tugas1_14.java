@@ -2,7 +2,7 @@ package Jobsheet1;
 
 import java.util.Scanner;
 
-public class Tugas1_16 {
+public class Tugas1_14 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

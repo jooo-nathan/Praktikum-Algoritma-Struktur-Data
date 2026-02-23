@@ -1,7 +1,7 @@
 package Jobsheet1;
 import java.util.Scanner;
 
-public class Tugas2_16 {
+public class Tugas2_14 {
 
     static Scanner sc = new Scanner(System.in);
 

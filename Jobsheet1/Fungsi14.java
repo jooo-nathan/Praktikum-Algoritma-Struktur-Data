@@ -1,7 +1,7 @@
 package Jobsheet1;
 import java.util.Scanner;
 
-public class Fungsi16 {
+public class Fungsi14 {
     public static void showData(int stok[][], int harga[]) {
         int cabang[] = new int[4];
         int jenisBunga[] = new int[4];

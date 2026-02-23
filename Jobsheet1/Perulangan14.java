@@ -2,7 +2,7 @@ package Jobsheet1;
 
 import java.util.Scanner;
 
-public class Perulangan16 {
+public class Perulangan14 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
