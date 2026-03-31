@@ -70,5 +70,5 @@ public class MahasiswaDemo14 {
         list.selectionSort();
         list.tampil();
 
-    }
+    } 
 }

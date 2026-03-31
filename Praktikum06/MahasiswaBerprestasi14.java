@@ -43,7 +43,7 @@ public class MahasiswaBerprestasi14 {
                     idxMin = j;
                 }
             }
-
+ 
             Mahasiswa14 tmp = listMhs[idxMin];
             listMhs[idxMin] = listMhs[i];
             listMhs[i] = tmp;

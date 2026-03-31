@@ -23,5 +23,5 @@ public class Mahasiswa14 {
         System.out.println("NIM     : " + nim);
         System.out.println("Kelas   : " + kelas);
         System.out.println("IPK     : " + ipk);
-    }
+    } 
 }
