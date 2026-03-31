@@ -15,11 +15,11 @@ public class MahasiswaBerprestasi14 {
     }
 
     void tampil() {
-    for (int i = 0; i < idx; i++) {
-        listMhs[i].tampilInformasi();
-        System.out.println("---------------------------------------");
+        for (int i = 0; i < idx; i++) {
+            listMhs[i].tampilInformasi();
+            System.out.println("---------------------------------------");
+        }
     }
-}
 
     void bubbleSort() {
     // Ganti listMhs.length menjadi idx
