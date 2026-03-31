@@ -37,7 +37,7 @@ public class MahasiswaDemo14 {
         System.out.println("\nData mahasiswa sebelum sorting:");
 
         for (int i = 0; i < jumlahMhs; i++) {
-            System.out.println("--------------------------");
+            System.out.println("-------------------------------");
             System.out.println("Mahasiswa ke-" + (i+1));
             System.out.println("NIM   : " + mhs[i].nim);
             System.out.println("Nama  : " + mhs[i].nama);
@@ -46,7 +46,7 @@ public class MahasiswaDemo14 {
         }
 
         System.out.println("\nData Mahasiswa setelah sorting berdasarkan IPK (DESC) : ");
-        System.out.println("--------------------------");
+        System.out.println("-----------------------------------------------------------");
 
         list.bubbleSort();
         list.tampil();
@@ -66,8 +66,13 @@ public class MahasiswaDemo14 {
         */
 
         System.out.println("\nData yang sudah terurut menggunakan SELECTION SORT (ASC)");
-        System.out.println("--------------------------");
+        System.out.println("-----------------------------------------------------------");
         list.selectionSort();
+        list.tampil();
+
+        System.out.println("\nData yang sudah terurut menggunakan INSERTION SORT (ASC)");
+        System.out.println("-----------------------------------------------------------");
+        list.insertionSort();
         list.tampil();
 
     } 
