@@ -3,30 +3,40 @@ import java.util.Scanner;
 
 public class MahasiswaDemo14 {
     public static void main(String[] args) {
-        MahasiswaBerprestasi14 list = new MahasiswaBerprestasi14();
+        // MahasiswaBerprestasi14 list = new MahasiswaBerprestasi14();
         
         Scanner sc = new Scanner(System.in);
 
-        int jumMhs = 5;
+        System.out.print("Masukkan jumlah mahasiswa : ");
+        int jumMhs = sc.nextInt();
+
+        MahasiswaBerprestasi14 list = new MahasiswaBerprestasi14();
+        Mahasiswa14 mhs[] = new Mahasiswa14[jumMhs];
+        System.out.println();
+        sc.nextLine();
 
         for (int i = 0; i < jumMhs; i++) {
+
+            mhs[i] = new Mahasiswa14();
             System.out.println("Masukkan Data Mahasiswa ke-" + (i + 1));
             
             System.out.print("NIM     : ");
-            String nim = sc.nextLine();
+            mhs[i].nim = sc.nextLine();
 
             System.out.print("Nama    : ");
-            String nama = sc.nextLine();
+            mhs[i].nama = sc.nextLine();
 
             System.out.print("Kelas   : ");
-            String kelas = sc.nextLine();
+            mhs[i].kelas = sc.nextLine();
 
             System.out.print("IPK     : ");
             String ip = sc.nextLine();
-            Double ipk = Double.parseDouble(ip);
+            mhs[i].ipk = Double.parseDouble(ip);
 
             System.out.println("------------------------------");
-            list.tambah(new Mahasiswa14(nim, nama, kelas, ipk));
+
+            list.tambah(mhs[i]);
+            // list.tambah(new Mahasiswa14(nim, nama, kelas, ipk));
 
         }
 
@@ -45,7 +55,6 @@ public class MahasiswaDemo14 {
         int pss = (int)posisi;
         list.tampilPosisi(cari, pss);
         list.tampilDataSearch(cari, pss);
-
 
         // MELAKUKAN PENCARIAN DATA BINARY
         System.out.println("\n--------------------------------");

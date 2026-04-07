@@ -16,7 +16,6 @@ public class MahasiswaBerprestasi14 {
     }
 
     void tampil() {
-
         System.out.println("\n--------------------------------------");
         System.out.println("Menampilkan data seluruh mahasiswa");
         System.out.println("--------------------------------------");
