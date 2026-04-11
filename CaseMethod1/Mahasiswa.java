@@ -7,10 +7,10 @@ public class Mahasiswa {
 
     }
 
-    Mahasiswa(String nm, String name, String prostud) {
-        nm = nim;
-        name = nama;
-        prostud = prodi;
+    Mahasiswa(String nim, String nama, String prodi) {
+        this.nim = nim;
+        this.nama = nama;
+        this.prodi = prodi;
     }
 
     void tampilMahasiswa() {

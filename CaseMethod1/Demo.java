@@ -65,63 +65,73 @@ public class Demo {
         pinjam[2].lamaPinjam = 10;
 
         pinjam[3].mhs = mhs[2];
-        pinjam[3].buku = buku[2];
+        pinjam[3].buku = buku[3];
         pinjam[3].lamaPinjam = 6;
 
         pinjam[4].mhs = mhs[0];
-        pinjam[4].buku = buku[0];
+        pinjam[4].buku = buku[1];
         pinjam[4].lamaPinjam = 4;
 
+        Peminjaman listPinjam = new Peminjaman();
+        Peminjaman[] sortedPeminjaman = new Peminjaman[pinjam.length];
+
         do {
-        System.out.println("\n=== SISTEM PEMINJAMAN RUANG BACA JTI ===\n");
+            System.out.println("\n=== SISTEM PEMINJAMAN RUANG BACA JTI ===\n");
 
-        System.out.println("1. Tampilkan Mahasiswa");
-        System.out.println("2. Tampilkan Buku");
-        System.out.println("3. Tampilkan Peminjaman");
-        System.out.println("4. Urutkan Berdasarkan Denda");
-        System.out.println("5. Cari Berdasarkan NIM");
-        System.out.println("0. Keluar\n");
+            System.out.println("1. Tampilkan Mahasiswa");
+            System.out.println("2. Tampilkan Buku");
+            System.out.println("3. Tampilkan Peminjaman");
+            System.out.println("4. Urutkan Berdasarkan Denda");
+            System.out.println("5. Cari Berdasarkan NIM");
+            System.out.println("0. Keluar\n");
 
-        System.out.print("Masukkan pilihan : ");
-        choice = sc.nextInt();
+            System.out.print("Masukkan pilihan : ");
+            choice = sc.nextInt();
 
-        if (choice == 1) {
-            System.out.println("\nDaftar Mahasiswa :");
-            for (int i = 0; i < mhs.length; i++) {
-                mhs[i].tampilMahasiswa();
+            if (choice == 1) {
+                System.out.println("\nDaftar Mahasiswa :");
+                for (int i = 0; i < mhs.length; i++) {
+                    mhs[i].tampilMahasiswa();
+                }
             }
-        }
-        else if (choice == 2) {
-            System.out.println("\nDaftar Buku :");
-            for (int i = 0; i < buku.length; i++) {
-                buku[i].tampilBuku();
+            else if (choice == 2) {
+                System.out.println("\nDaftar Buku :");
+                for (int i = 0; i < buku.length; i++) {
+                    buku[i].tampilBuku();
+                }
             }
-        }
-        else if (choice == 3) {
-            System.out.println("\nData Peminjaman :");
-            for (int i = 0; i < pinjam.length; i++) {
-                pinjam[i].tampilPeminjaman();
+            else if (choice == 3) {
+                System.out.println("\nData Peminjaman :");
+                for (int i = 0; i < pinjam.length; i++) {
+                    pinjam[i].tampilPeminjaman();
+                }
             }
-        }
-        else if (choice == 4) {
-            System.out.println("Setelah diurutkan (Denda terbesar) :");
+            else if (choice == 4) {
 
-            
-            for (int i = 0; i < pinjam.length; i++) {
-                pinjam[i].tampilPeminjaman();
+                sortedPeminjaman = listPinjam.insertionSort(pinjam, "denda");
+
+                System.out.println("\nSetelah diurutkan (Denda terbesar) :");
+
+                for (int i = 0; i < pinjam.length; i++) {
+                    sortedPeminjaman[i].tampilPeminjaman();
+                }
             }
-        }
-        else if (choice == 5) {
+            else if (choice == 5) {
 
-        }
-        else if (choice == 0) {
-            System.out.println("\nTerima kasih telah menggunakan layanan kami!\n");
-            break;
-        }
-        else {
-            System.out.println("\nPilihan anda tidak ada dalam menu. Silakan masukkan ulang.\n");
-        }
+                sc.nextLine();
+                System.out.print("\nMasukkan NIM : ");
+                String NIMkey = sc.nextLine();
 
+                listPinjam.binarySearch(pinjam, NIMkey);
+
+            }
+            else if (choice == 0) {
+                System.out.println("\nTerima kasih telah menggunakan layanan kami!\n");
+                break;
+            }
+            else {
+                System.out.println("\nPilihan anda tidak ada dalam menu. Silakan masukkan ulang.");
+            }
 
         } while (choice != 0);
     }

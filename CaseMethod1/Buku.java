@@ -8,10 +8,10 @@ public class Buku {
 
     }
 
-    Buku(String kode, String jdl, int thn) {
-        kodeBuku = kode;
-        judul =  jdl;
-        tahunTerbit = thn;
+    Buku(String kodeBuku, String judul, int tahunTerbit) {
+        this.kodeBuku = kodeBuku;
+        this.judul =  judul;
+        this.tahunTerbit = tahunTerbit;
     }
 
     void tampilBuku() {
