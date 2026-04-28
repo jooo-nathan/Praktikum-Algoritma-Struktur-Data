@@ -33,7 +33,7 @@ public class LayananAkademikSIAKAD {
                     System.out.print("Kelas : ");
                     String kelas = sc.nextLine();
 
-                    Mahasiswa mhs = new Mahasiswa(nim, nama, nama, kelas);
+                    Mahasiswa mhs = new Mahasiswa(nim, nama, prodi, kelas);
                     antrian.tambahAntrian(mhs);
                     break;
 
