@@ -14,7 +14,22 @@ public class Buku {
         this.tahunTerbit = tahunTerbit;
     }
 
-    void tampilBuku() {
+    void tampilBuku(String kodeBuku, String judul, int tahunTerbit) {
         System.out.println("Kode : " + kodeBuku + " | Judul : " + judul + " | Tahun : " + tahunTerbit);
+    }
+
+    void kodeBukuSearching(Buku[] book, String key) {
+
+        Boolean counter = false;
+        for (int i = 0; i < book.length; i++) {
+            if (key.equalsIgnoreCase(book[i].kodeBuku)) {
+                tampilBuku(book[i].kodeBuku, book[i].judul, book[i].tahunTerbit);
+                counter = true;
+                break;
+            }
+        }
+        if (!counter) {
+            System.out.println("\nBuku tidak ditemukan!");
+        }
     }
 }

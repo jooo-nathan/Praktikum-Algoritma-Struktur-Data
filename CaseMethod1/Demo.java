@@ -7,6 +7,8 @@ public class Demo {
         Scanner sc = new Scanner(System.in);
         int choice = 1;
 
+        Buku buk = new Buku();
+
         Mahasiswa mhs[] = new Mahasiswa[3];
         for (int i = 0; i < mhs.length; i++) {
             mhs[i] = new Mahasiswa();
@@ -82,7 +84,7 @@ public class Demo {
             System.out.println("2. Tampilkan Buku");
             System.out.println("3. Tampilkan Peminjaman");
             System.out.println("4. Urutkan Berdasarkan Denda");
-            System.out.println("5. Cari Berdasarkan NIM");
+            System.out.println("5. Cari Berdasarkan Kode Buku");
             System.out.println("0. Keluar\n");
 
             System.out.print("Masukkan pilihan : ");
@@ -97,7 +99,7 @@ public class Demo {
             else if (choice == 2) {
                 System.out.println("\nDaftar Buku :");
                 for (int i = 0; i < buku.length; i++) {
-                    buku[i].tampilBuku();
+                    buku[i].tampilBuku(buku[i].kodeBuku, buku[i].judul, buku[i].tahunTerbit);
                 }
             }
             else if (choice == 3) {
@@ -119,10 +121,10 @@ public class Demo {
             else if (choice == 5) {
 
                 sc.nextLine();
-                System.out.print("\nMasukkan NIM : ");
-                String NIMkey = sc.nextLine();
+                System.out.print("\nMasukkan Kode Buku : ");
+                String bookKey = sc.nextLine();
 
-                listPinjam.binarySearch(pinjam, NIMkey);
+                buk.kodeBukuSearching(buku, bookKey);
 
             }
             else if (choice == 0) {
