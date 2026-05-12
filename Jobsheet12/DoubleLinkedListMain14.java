@@ -33,6 +33,7 @@ public class DoubleLinkedListMain14 {
             System.out.println("4. Hapus data di awal");
             System.out.println("5. Hapus data di akhir");
             System.out.println("6. Tampilkan data dari awal");
+            System.out.println("7. Tampilkan data dari akhir");
             System.out.println("0. Keluar\n");
 
             System.out.print("Pilih menu : ");
@@ -69,6 +70,10 @@ public class DoubleLinkedListMain14 {
 
                 case 6:
                     list.print();
+                    break;
+
+                case 7:
+                    list.printReverse();
                     break;
 
                 case 0:
