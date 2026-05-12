@@ -109,6 +109,10 @@ public class DoubleLinkedList14 {
         }
         else {
             head = head.next;
+
+            System.out.println("\nData berhasil dihapus");
+            printOne(head.prev);
+
             head.prev = null;
         }
     }
@@ -124,7 +128,20 @@ public class DoubleLinkedList14 {
         }
         else {
             tail = tail.prev;
+
+            System.out.println("\nData berhasil dihapus");
+            printOne(tail.next);
+
             tail.next = null;
         }
+    }
+
+    void printOne(Node14 node) {
+        System.out.println(
+            "\nNIM        : " + node.data.nim +
+            "\nNama       : " + node.data.nama +
+            "\nKelas      : " + node.data.kelas +
+            "\nIPK        : " + node.data.ipk
+        );
     }
 }
