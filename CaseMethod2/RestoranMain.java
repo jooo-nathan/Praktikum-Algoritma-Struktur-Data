@@ -19,17 +19,37 @@ public class RestoranMain {
     }
 
     static Pembeli inputAntrian(int idx) {
-        System.out.println("\n| INPUT DATA |\n");
+        System.out.println("\n======================");
+        System.out.println("| INPUT DATA PEMBELI |");
+        System.out.println("======================\n");
+
         System.out.print("| Nama Pembeli        : ");
         String namaPembeli = sc.nextLine();
         System.out.print("| No HP               : ");
         String noHP = sc.nextLine();
         
         Pembeli pembeli = new Pembeli(namaPembeli, noHP, idx);
-        System.out.println("\nAntrian berhasil ditambahkan!");
-        System.out.println("Nomor antrian : " + idx);
+
+        System.out.println("\n| Nomor antrian : " + idx);
+        System.out.println("| Antrian berhasil ditambahkan");
 
         return pembeli;
+    }
+
+    static Pesanan inputPesanan() {
+        System.out.println("\n======================");
+        System.out.println("| INPUT DATA PESANAN |");
+        System.out.println("======================\n");
+
+        System.out.print("| Kode Pesanan        : ");
+        String kodePesanan = sc.nextLine();
+        System.out.print("| Nama Pesanan        : ");
+        String namaPesanan = sc.nextLine();
+        System.out.print("| Harga               : ");
+        int harga = sc.nextInt();
+
+        Pesanan pesanan = new Pesanan(kodePesanan, namaPesanan, harga);
+        return pesanan;
     }
 
     public static void main(String[] args) {
@@ -49,18 +69,21 @@ public class RestoranMain {
                 case 1:
                     index++;
                     sc.nextLine();
-                    inputAntrian(index);
+                    restoran.tambahAntrian(inputAntrian(index));
                     break;
 
                 case 2:
                     restoran.cetakAntrian();
                     break;
 
-                case 3:
-
+                case 3: // BINGUNGGGG
+                    sc.nextLine();
+                    restoran.hapusDanPesan();
+                    break;
 
                 case 4:
-
+                    restoran.laporanPesanan();
+                    break;
 
                 case 0:
                     System.out.println("\nTerima kasih telah menggunakan layanan kami.\n");
@@ -70,6 +93,7 @@ public class RestoranMain {
                     System.out.println("\nPilihan tidak valid. Silakan masukkan ulang!");
                     break;
             }
+            
         } while (pilihan != 0);
     }
 }
