@@ -47,6 +47,7 @@ public class RestoranMain {
         String namaPesanan = sc.nextLine();
         System.out.print("| Harga               : ");
         int harga = sc.nextInt();
+        sc.nextLine();
 
         Pesanan pesanan = new Pesanan(kodePesanan, namaPesanan, harga);
         return pesanan;
@@ -70,6 +71,14 @@ public class RestoranMain {
                     index++;
                     sc.nextLine();
                     restoran.tambahAntrian(inputAntrian(index));
+
+                    /*
+                    Pembeli pemb1 = new Pembeli("jojo", "082", 1);
+                    Pembeli pemb2 = new Pembeli("nathan", "081", 2);
+                    restoran.tambahAntrian(pemb1);
+                    restoran.tambahAntrian(pemb2);
+                    */
+                   
                     break;
 
                 case 2:
@@ -86,11 +95,16 @@ public class RestoranMain {
                     break;
 
                 case 0:
-                    System.out.println("\nTerima kasih telah menggunakan layanan kami.\n");
+                    System.out.println("\n-----------------------------------------------");
+                    System.out.println("| Terima kasih telah menggunakan layanan kami |");
+                    System.out.println("-----------------------------------------------");
                     break;
 
                 default:
-                    System.out.println("\nPilihan tidak valid. Silakan masukkan ulang!");
+                    System.out.println("\n------------------------------------------------");
+                    System.out.println("| Pilihan tidak valid. Silakan masukkan ulang! |");
+                    System.out.println("------------------------------------------------");
+
                     break;
             }
             

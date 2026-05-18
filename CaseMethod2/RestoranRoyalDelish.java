@@ -3,10 +3,8 @@ package CaseMethod2;
 public class RestoranRoyalDelish {
 
     NodePembeli headPembeli, tailPembeli;
-    Pembeli pembeli = new Pembeli();
 
     NodePesanan headPesanan, tailPesanan;
-    Pesanan pesanan = new Pesanan();
 
     boolean isPembeliEmpty() {
         return (headPembeli == null);
@@ -96,35 +94,74 @@ public class RestoranRoyalDelish {
         System.out.println("======================================\n");
 
         System.out.printf("%-20s %-30s %-20s\n", "Kode Pesanan", "Nama Pesanan", "Harga");
+
         insertionSort();
+
+        // mulai nampilin
+        NodePesanan current = headPesanan;
+        while (current != null) {
+            System.out.printf("%-20s %-30s %-20d\n", current.data.kodePesanan, current.data.namaPesanan, current.data.harga);
+            current = current.next;
+        }
     }
 
-    void insertionSort() { // ASC NAMA PESANAN
+    void insertionSort() { // ASC NAMA PESANAN, ES TEH, ROTI, SUSU
 
-        if (headPesanan == tailPesanan) {
-            System.out.printf("%-20s %-30s %-20d\n", headPesanan.data.kodePesanan, headPesanan.data.namaPesanan, headPesanan.data.harga);
-        }
-        else {
+        NodePesanan current = headPesanan.next;
 
-            NodePesanan current = headPesanan.next;
+        while (current != null) {
 
-            while (current != null) {
+            NodePesanan back = current.prev;
+            NodePesanan front = current.next;
 
-                NodePesanan back = current.prev;
-                NodePesanan front = current.next;
+            while (back != null && back.data.namaPesanan.compareToIgnoreCase(current.data.namaPesanan) > 0) {
+                back = back.prev;
+            }
 
-                while (front != null && current.data.namaPesanan.compareToIgnoreCase(back.data.namaPesanan) > 0) {
-                    back = back.prev;
+            // kalo ada yg berubah
+            if (back != current.prev) {
+
+                // lepas dulu ikatan terhadap current
+                if (front != null) {
+                    current.next.prev = current.prev;
                 }
+                else {
+                    tailPesanan = current.prev;
+                }
+                current.prev.next = current.next;
 
-                if (back != current.prev) {
-                    if (current.next != null) {
-                        
+                // menyisipkan current setelah node back
+
+                if (back == null) { // null current head --> urutan
+                    current.next = headPesanan;
+                    current.prev = null;
+                    headPesanan.prev = current;
+                    headPesanan = current;
+                }
+                else {
+                    current.next = back.next;
+                    current.prev = back;
+
+                    if (back.next != null) {
+                        back.next.prev = current;
                     }
+                    else {
+                        tailPesanan = current;
+                    }
+                    back.next = current;
                 }
             }
 
-
+            // lanjut nyari
+            current = front;
         }
+    }
+
+    void binarySearch() {
+        String key = "a";
+
+        
+
+        String middle;
     }
 }
