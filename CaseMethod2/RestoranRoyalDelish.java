@@ -156,12 +156,4 @@ public class RestoranRoyalDelish {
             current = front;
         }
     }
-
-    void binarySearch() {
-        String key = "a";
-
-        
-
-        String middle;
-    }
 }
