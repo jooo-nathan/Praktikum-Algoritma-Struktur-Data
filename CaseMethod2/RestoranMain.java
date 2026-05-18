@@ -55,7 +55,6 @@ public class RestoranMain {
 
     public static void main(String[] args) {
         
-        Pembeli pembeli = new Pembeli();
         RestoranRoyalDelish restoran = new RestoranRoyalDelish();
 
         int pilihan, index = 0;
