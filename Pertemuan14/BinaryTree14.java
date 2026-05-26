@@ -201,4 +201,86 @@ public class BinaryTree14 {
             }
         }
     }
+
+    // LATIHAN PRAKTIKUM -----------------------------------------------------------------------------------------
+
+    // MODIFIKASI NOMOR 1
+
+    void addRekursif(Node14 current, Mahasiswa14 mahasiswa) { // menambahkan node dengan rekursif
+
+        if (isEmpty()) {
+            root = new Node14(mahasiswa);
+            return;
+        }
+
+        if (mahasiswa.ipk < current.mahasiswa.ipk) { // kalau ipk yg mau diinput lebih kecil dari ipk saat ini
+            if (current.left == null) {
+                current.left = new Node14(mahasiswa);
+            }
+            else {
+                addRekursif(current.left, mahasiswa);
+            }
+        }
+        else if (mahasiswa.ipk > current.mahasiswa.ipk) {
+            if (current.right == null) {
+                current.right = new Node14(mahasiswa);
+            }
+            else {
+                addRekursif(current.right, mahasiswa);
+            }
+        }
+    }
+
+    // MODIFIKASI NOMOR 2
+
+    Node14 cariMinIPK() {
+        if (isEmpty()) {
+            System.out.println("Tree masih kosong.");
+            return null;
+        }
+
+        Node14 current = root;
+
+        while (current.left != null) {
+            current = current.left;
+        }
+
+        return current;
+    }
+
+    Node14 cariMaxIPK() {
+        if (isEmpty()) {
+            System.out.println("Tree masih kosong.");
+            return null;
+        }
+
+        Node14 current = root;
+
+        while (current.right != null) {
+            current = current.right;
+        }
+
+        return current;
+    }
+
+    // MODIFIKASI NOMOR 3
+
+    void tampilMahasiswaIPKdiAtas(double ipkBatas, Node14 current) {
+
+        if (isEmpty()) {
+            System.out.println("Tree masih kosong.");
+            return;
+        }
+
+        if (current != null) {
+
+            tampilMahasiswaIPKdiAtas(ipkBatas, current.left);
+
+            if (current.mahasiswa.ipk > ipkBatas) {
+                current.mahasiswa.tampilInformasi();
+            }
+            
+            tampilMahasiswaIPKdiAtas(ipkBatas, current.right);
+        }
+    }
 }
