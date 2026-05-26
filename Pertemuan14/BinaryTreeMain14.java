@@ -18,7 +18,7 @@ public class BinaryTreeMain14 {
         String hasilCari = bat.find(3.54) ? "Ditemukan" : "Tidak ditemukan";
         System.out.println(hasilCari);
 
-        System.out.print("Cari mahasiswa dengan IPK : 3.23 : ");
+        System.out.print("Cari mahasiswa dengan IPK : 3.22 : ");
         hasilCari = bat.find(3.22) ? "Ditemukan" : "Tidak ditemukan";
         System.out.println(hasilCari);
 
